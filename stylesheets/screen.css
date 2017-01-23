@@ -1,0 +1,207 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+/* line 5, ../../lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*------------------------------------*\
+    $MAIN flex temp/test
+\*------------------------------------*/
+/* line 14, ../sass/screen.scss */
+body {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1240px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f6f6f6;
+}
+
+/* Typography */
+/* line 24, ../sass/screen.scss */
+h1 {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 2.0em;
+}
+
+/* line 30, ../sass/screen.scss */
+h2 {
+  font-size: 34px;
+}
+
+/* line 32, ../sass/screen.scss */
+h5 {
+  font-weight: 500;
+  line-height: 1.90em;
+}
+
+/* line 37, ../sass/screen.scss */
+h6 {
+  color: #666;
+  font-size: 14px;
+}
+
+/* line 42, ../sass/screen.scss */
+p {
+  line-height: 1.20em;
+}
+
+/* line 46, ../sass/screen.scss */
+li {
+  list-style: square;
+  margin: auto 20px;
+}
+
+/* Skill box colors */
+/* line 56, ../sass/screen.scss */
+.skill--web {
+  background: blue;
+}
+
+/* line 57, ../sass/screen.scss */
+.skill--science {
+  background: red;
+}
+
+/* Skill Section Flexbox Layout */
+/* line 62, ../sass/screen.scss */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  flex: 1;
+}
+/* line 69, ../sass/screen.scss */
+.skills .skill {
+  position: relative;
+  width: 450px;
+  padding: 10px;
+  align-self: flex-start;
+}
+/* line 74, ../sass/screen.scss */
+.skills .skill div {
+  width: 450px;
+  padding: 1px 10px;
+  -webkit-transition: height 0.5s, top 0.5s, ease-in-out;
+  height: 80px;
+  top: 0;
+  left: 0;
+  background: skyblue;
+}
+/* line 84, ../sass/screen.scss */
+.skills .skill .title {
+  z-index: 1000;
+}
+/* line 87, ../sass/screen.scss */
+.skills .skill .copy {
+  background: rgba(135, 206, 235, 0.8);
+  overflow: hidden;
+  height: 0;
+}
+/* line 93, ../sass/screen.scss */
+.skills .web {
+  align-items: flex-start;
+  text-align: left;
+  margin: 0 10px;
+}
+/* line 98, ../sass/screen.scss */
+.skills .web:hover .copy {
+  -webkit-transition: height 0.5s, top 0.5s, ease-in-out;
+  height: 420px;
+  top: 90px;
+  overflow: visible;
+}
+/* line 105, ../sass/screen.scss */
+.skills .science {
+  text-align: left;
+  margin: 0 10px;
+}
+/* line 109, ../sass/screen.scss */
+.skills .science:hover .copy {
+  -webkit-transition: height 0.5s, top 0.5s ease-in-out;
+  height: 420px;
+  top: 90px;
+  overflow: visible;
+}
+/* line 116, ../sass/screen.scss */
+.skills .contact {
+  margin: 0 10px;
+}
+/* line 118, ../sass/screen.scss */
+.skills .contact:hover .copy {
+  -webkit-transition: height 0.5s, top 0.5s ease-in-out;
+  height: 200px;
+  top: 90px;
+  overflow: visible;
+}
+
+/* line 128, ../sass/screen.scss */
+#cv {
+  display: none;
+}

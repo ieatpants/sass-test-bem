@@ -1,0 +1,130 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+  /*------------------------------------*\
+      $MAIN flex temp/test
+  \*------------------------------------*/
+
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+  body {
+  	margin: 0 auto;
+  	width: 90%;
+  	max-width: 1240px;
+  	font-family: 'Roboto', sans-serif;
+  	background-color: #f6f6f6;
+  }
+
+  /* Typography */
+
+  h1 {
+  	font-size: 28px;
+  	font-weight: 300;
+  	line-height: 2.0em;
+  }
+
+  h2 {font-size:34px;}
+
+  h5 {
+  	font-weight: 500;
+  	line-height: 1.90em;
+  }
+
+  h6 {
+  	color: #666;
+  	font-size: 14px;
+  }
+
+  p {
+    line-height: 1.20em;
+  }
+
+  li {
+    list-style: square;
+    margin: auto 20px;
+  }
+
+/* Skill box colors */
+$web-color: blue;
+$science-color: red;
+$skill-div:skyblue;
+
+.skill--web{background:$web-color;}
+.skill--science{background: $science-color;}
+
+
+/* Skill Section Flexbox Layout */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width:100%;
+  flex: 1;
+  .skill {
+  position: relative;
+  width: 450px;
+  padding:10px;
+  align-self:flex-start;
+  div {
+  		width: 450px;
+  		padding: 1px 10px;
+      -webkit-transition: height 0.5s, top 0.5s, ease-in-out;
+      height: 80px;
+  		top: 0;
+  		left: 0;
+  		background: $skill-div;
+
+    }
+  .title {
+      z-index: 1000;
+    }
+  .copy {
+      background:rgba($skill-div,0.80);
+      overflow: hidden;
+      height:0;
+    }
+  }
+  .web {
+    //align-self: center;
+    align-items: flex-start;
+    text-align: left;
+    margin:0 10px;
+    &:hover .copy {
+      -webkit-transition: height 0.5s, top 0.5s, ease-in-out;
+      height:420px;
+      top:90px;
+      overflow:visible;
+    }
+  }
+  .science {
+    //align-self: center;
+    text-align: left;
+    margin:0 10px;
+    &:hover .copy {
+      -webkit-transition: height 0.5s, top 0.5s ease-in-out;
+      height:420px;
+      top:90px;
+      overflow:visible;
+    }
+  }
+  .contact {
+    margin:0 10px;
+    &:hover .copy {
+      -webkit-transition: height 0.5s, top 0.5s ease-in-out;
+      height:200px;
+      top:90px;
+      overflow:visible;
+    }
+  }
+}
+
+
+#cv {
+  display: none;
+}
